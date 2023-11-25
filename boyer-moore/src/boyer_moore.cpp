@@ -32,10 +32,10 @@ void Boyer_Moore::setPattern(const std::string& pattern) {
 /// It stores the maximum shift for each character, if the character is not present in the pattern, then value is -1.
 void Boyer_Moore::preBadChar(std::string pattern) {
     int patternLength = pattern.length();
-    this->badChar.resize(256, -1);
+    this->badChar.assign(256, -1);
 
     for (int i = 0; i < patternLength - 1; i++)
-        this->badChar[int(pattern[i])] = patternLength - i - 1;
+        this->badChar[int(pattern[i])] = i;
 }
 
 /// @brief Precalculate good suffix table
@@ -45,38 +45,18 @@ void Boyer_Moore::preBadChar(std::string pattern) {
 void Boyer_Moore::preGoodSuffix(std::string pattern) {
     // Initialize goodSuffix with 0
     int patternLength = pattern.length();
-    this->goodSuffix.resize(patternLength, 0);
-    std::vector<int> suffix(patternLength, 0); // suffix[i] stores the length of the longest suffix of pattern[i..patternLength-1] that matches the suffix of pattern
-    int j = 0;
+    this->goodSuffix.assign(patternLength, -1);
+    this->isPrefix.assign(patternLength, false);
 
-    // Calculate suffix array
-    suffix[patternLength - 1] = patternLength;
-    for (int i = patternLength - 2; i >= 0; i--) {
-        while (j > 0 && pattern[i] != pattern[patternLength - j - 1])
-            j = suffix[j - 1];
+    for (int i = 0, j, k; i < patternLength - 1; i++) {
+        j = i;
+        k = 0;
+        while (j >= 0 && pattern[j] == pattern[patternLength - k - 1])
+            this->goodSuffix[++k] = (--j) + 1;
 
-        if (pattern[i] == pattern[patternLength - j - 1])
-            j++;
-
-        suffix[i] = j;
+        if (j < 0)
+            this->isPrefix[k] = true;
     }
-
-    // Handle the case where suffix is prefix
-    j = 0;
-    for (int i = patternLength - 1; i >= 0; i--) {
-        // Suffix ending at i is a prefix
-        if (suffix[i] == i + 1) {
-            while (j < patternLength - i - 1) {
-                if (this->goodSuffix[j] == 0)
-                    this->goodSuffix[j] = patternLength - i - 1;
-                j++;
-            }
-        }
-    }
-
-    // Final update of goodSuffix based on suffix array
-    for (int i = 0; i <= patternLength - 2; i++)
-        this->goodSuffix[patternLength - suffix[i] - 1] = patternLength - i - 1;
 }
 
 /// @brief Move by good suffix
@@ -88,9 +68,17 @@ void Boyer_Moore::preGoodSuffix(std::string pattern) {
 int Boyer_Moore::moveByGoodSuffix(int index, int patternLength) {
     int suffixLength = patternLength - index - 1;
 
-    if (this->goodSuffix[suffixLength] > 0)
-        return suffixLength - this->goodSuffix[suffixLength] + 1;
-    return 1;
+    // If there is a good suffix match
+    if (this->goodSuffix[suffixLength] != -1)
+        return index - this->goodSuffix[suffixLength] + 1;
+
+    // If there is a prefix match
+    for (int i = index + 2; i < patternLength; i++) {
+        if (this->isPrefix[patternLength = i])
+            return i;
+    }
+
+    return patternLength;
 }
 
 std::vector<int> Boyer_Moore::search(const std::string& text) {

@@ -9,6 +9,7 @@ private:
     std::string pattern;
     std::vector<int> badChar;
     std::vector<int> goodSuffix;
+    std::vector<bool> isPrefix;
 
     void preBadChar(std::string pattern);
     void preGoodSuffix(std::string pattern);
