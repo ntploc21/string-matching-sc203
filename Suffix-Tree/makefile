@@ -1,5 +1,5 @@
 all:
-	g++ main.cpp -o main
+	g++ *.cpp -o main
 
 run:
 	./main < .inp > .out
