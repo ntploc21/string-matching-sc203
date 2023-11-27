@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 
-// code from cp-algorithms: https://cp-algorithms.com/string/aho_corasick.html
 namespace aho_corasick {
     class AhoCorasick {
         public:

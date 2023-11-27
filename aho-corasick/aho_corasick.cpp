@@ -1,7 +1,5 @@
 #include "aho_corasick.hpp"
 
-// i don't know is this code is ok or not, but it works
-// gonna improve it later
 namespace aho_corasick {
 
     AhoCorasick::Vertex::Vertex(int p, char ch, int depth) : p(p), pch(ch), depth(depth) {
