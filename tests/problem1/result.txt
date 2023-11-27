@@ -1,0 +1,36 @@
+./lim100
+KMP: 0.294118
+Aho-Corasick: 4.82353
+Boyer-Moore: 0.666667
+Rabin-Karp: 2.64706
+Suffix-Tree: 12.6863
+./lim1000
+KMP: 2.23529
+Aho-Corasick: 55.6471
+Boyer-Moore: 2.90196
+Rabin-Karp: 12.1765
+Suffix-Tree: 109.137
+./lim5000
+KMP: 9.15686
+Aho-Corasick: 470.275
+Boyer-Moore: 8.27451
+Rabin-Karp: 53.4902
+Suffix-Tree: 492.51
+./lim10000
+KMP: 19.2157
+Aho-Corasick: 923.745
+Boyer-Moore: 15.0392
+Rabin-Karp: 97.5882
+Suffix-Tree: 932.529
+./lim100000
+KMP: 268.49
+Aho-Corasick: 12973.1
+Boyer-Moore: 212.157
+Rabin-Karp: 2492.25
+Suffix-Tree: 30756.3
+./lim500000
+KMP: 1377.73
+Aho-Corasick: 68551.8
+Boyer-Moore: 1287.76
+Rabin-Karp: 10107.1
+Suffix-Tree: 221733
