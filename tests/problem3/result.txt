@@ -1,0 +1,24 @@
+./keywords-1000-one-input-1000
+KMP: 1182
+Aho-Corasick: 14785
+Boyer-Moore: 772.5
+Rabin-Karp: 14235.8
+Suffix-Tree: 321.5
+./keywords-1000-one-input-100000
+KMP: 85077.8
+Aho-Corasick: 110282
+Boyer-Moore: 15819.2
+Rabin-Karp: Timeout
+Suffix-Tree: 32910
+./keywords-1000-multiple-input-1000
+KMP: Timeout
+Aho-Corasick: 177150
+Boyer-Moore: 5777.75
+Rabin-Karp: Timeout
+Suffix-Tree: 312226
+./keywords-1000-multiple-input-100000
+KMP: Timeout
+Aho-Corasick: 237458
+Boyer-Moore: Timeout
+Rabin-Karp: Timeout
+Suffix-Tree: Timeout

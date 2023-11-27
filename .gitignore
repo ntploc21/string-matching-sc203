@@ -32,3 +32,13 @@
 *.app
 
 .vscode/
+tests/*
+!tests/problem1
+!tests/problem2
+!tests/problem3
+tests/problem1/*
+tests/problem2/*
+tests/problem3/*
+!tests/**/main.cpp
+!tests/**/Makefile
+!tests/**/result.txt

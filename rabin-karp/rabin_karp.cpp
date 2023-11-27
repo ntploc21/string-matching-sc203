@@ -8,7 +8,6 @@ namespace rabin_karp {
         const int p = 31;
         int pattern_size = pattern.size(), text_size = text.size();
         const int m = random_prime((long long)pattern_size * text_size * text_size);
-        std::cout << m << '\n';
 
         // Calculate (p^i) % m
         std::vector<long long> p_pow(std::max(pattern_size, text_size));
@@ -24,13 +23,11 @@ namespace rabin_karp {
         // Calculate the hash of pattern
         long long hash_pattern = 0;
         for (int i = 0; i < pattern_size; i++) hash_pattern = (hash_pattern + pattern[i] * p_pow[i]) % m;
-        std::cout << hash_pattern << '\n';
 
         // Rabin-Karp 
         std::vector<int> occurrences;
         for (int i = 0; i + pattern_size - 1 < text_size; i++) {
             long long cur_hash = (hash_text[i + pattern_size] + m - hash_text[i]) % m;
-            std::cout << cur_hash << ' ';
             if (cur_hash == ((hash_pattern * p_pow[i]) % m)) {
                 bool isEqual = true;
                 for (int j = 0; j < pattern_size; ++j) {

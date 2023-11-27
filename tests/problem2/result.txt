@@ -1,0 +1,30 @@
+./100
+KMP: 2.90909
+Aho-Corasick: 7
+Boyer-Moore: 3.45455
+Rabin-Karp: 1.09091
+Suffix-Tree: 0.363636
+./1000
+KMP: 17.1818
+Aho-Corasick: 389.364
+Boyer-Moore: 29.8182
+Rabin-Karp: 27.0909
+Suffix-Tree: 2.90909
+./10000
+KMP: 211.909
+Aho-Corasick: 6205.09
+Boyer-Moore: 331.727
+Rabin-Karp: 745.545
+Suffix-Tree: 18
+./100000
+KMP: 5825.18
+Aho-Corasick: 202932
+Boyer-Moore: 7310.09
+Rabin-Karp: 29789.6
+Suffix-Tree: 567.636
+./1000000
+KMP: 62680.8
+Aho-Corasick: 2.40582e+06
+Boyer-Moore: 71056.4
+Rabin-Karp: 337990
+Suffix-Tree: 4392.09
