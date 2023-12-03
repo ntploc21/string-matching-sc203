@@ -1,10 +1,17 @@
 # String Matching Survey (SC203)
 
+This repository contains implementations and a comparative study of various string comparison algorithms, including Rabin-Karp, Knuth-Morris-Pratt (KMP), Boyer-Moore, Suffix Tree, and Aho-Corasick. Each algorithm has its own dedicated folder with the corresponding implementation.
+
 # Introduction
 
-String comparison algorithms form the backbone of computer science, finding applications in text processing, pattern matching, and data mining. Our survey aims to unravel the performance nuances of these popular algorithms while offering practical code implementations.
+String comparison algorithms form the backbone of computer science, finding applications in text processing, pattern matching, biological sequences finding and data analysis. Our survey aims to giving a brief explanation, result of benchmark of three common but widely used problem for these algorithms and compare them to see the difference.
 
-# Algorithm
+Problem we have proposed to tested on these algorithm are:
+1. Single Pattern Searching in a Text;
+2. Multiple Pattern Searching in a Text;
+3. Multiple Pattern Searching in a Text with Multiple Patterns.
+
+# Algorithms
 
 - Rabin-Karp
 - Knuth-Morris-Pratt (KMP)
@@ -14,7 +21,7 @@ String comparison algorithms form the backbone of computer science, finding appl
 
 # Installation
 
-Each algorithm implementation is included in its designated folder. To run or test a specific algorithm, go to each folder and read README.md on each algorithm for more details.
+Each algorithm implementation is included in its dedicated folder. To run or test a specific algorithm, go to each folder and read README.md on each algorithm for more details.
 
 # Exploration Resources
 
