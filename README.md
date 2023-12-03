@@ -25,7 +25,7 @@ Each algorithm implementation is included in its dedicated folder. To run or tes
 
 # Exploration Resources
 
-For an in-depth understanding of the algorithms, survey, benchmark and comparison of string comparison algorithms, please refer to our research paper: LINK_PLACEHOLDER
+For an in-depth understanding of the algorithms, survey, benchmark and comparison of string comparison algorithms, please refer to our research paper: [Paper link](https://github.com/ntploc21/string-matching-sc203/blob/rewrite-README-2/Unraveling_Exact_String_Matching_Algorithms__Survey__Experiment_and_Comparison.pdf)
 
 # Demo
 
