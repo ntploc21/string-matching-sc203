@@ -4,7 +4,7 @@ This repository contains implementations and a comparative study of various stri
 
 # Introduction
 
-String comparison algorithms form the backbone of computer science, finding applications in text processing, pattern matching, biological sequences finding and data analysis. Our survey aims to giving a brief explanation, result of benchmark of three common but widely used problem for these algorithms and compare them to see the difference.
+String comparison algorithms form the backbone of computer science, finding applications in text processing, pattern matching, biological sequences finding and data analysis. Our survey aims to giving a brief explanation, result benchmark of three common but widely used problems for these algorithms and compare them to see the difference.
 
 Problem we have proposed to tested on these algorithm are:
 1. Single Pattern Searching in a Text;
