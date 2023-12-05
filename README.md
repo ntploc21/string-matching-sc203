@@ -29,9 +29,10 @@ For an in-depth understanding of the algorithms, survey, benchmark and compariso
 
 # Demo
 
-The video provides insights into the functionality and efficiency of each algorithm.
+The video below provides insights into the functionality and efficiency of each algorithm. Watch it if you want to see more details about algorithm that we hass surveyed.
 
-DEMOLINK_PLACEHOLDER
+[Video Link](https://youtu.be/9ylOJpL3gFA?si=jjd8Mw_-DlAJrIOe)
+
 
 # Contributors
 
